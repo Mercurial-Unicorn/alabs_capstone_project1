@@ -200,15 +200,15 @@ select * from salaries_jes;
 ```
 
 #### Step-4: EDA (Exploratory Data Analysis) in Impala.
-![This is snapshot of HUE Impala]()
+![This is snapshot of HUE Impala](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/00%20-%20Impala.png)
 
 ##### 1) A list showing employee number, last name, first name, sex, and salary for each employee1. 
 ```
 select e.emp_no, e.last_name, e.first_name, e.sex, s.salary from employees_jes e
 JOIN salaries_jes s on e.emp_no = s.emp_no;
 ```
-![Query 1 output]()
-![Query 1 output Scatterplot by sex]()
+![Query 1 output](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/01.png)
+![Query 1 output Scatterplot by sex](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/01_1.png)
 
 ##### 2) A list showing first name, last name, and hire date for employees who were hired in 1986.
 ```
@@ -269,10 +269,10 @@ select salary, count(*) as no_emp from salaries_jes group by salary;
 
 select avg(salary), count(*) as no_emp from salaries_jes group by salary;
 ```
-![Query 9 output]()
-![Query 9 output]()
-![Query 9 output]()
-![Query 9 output]()
+![Query 9 output](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/09.png)
+![Query 9 output](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/09_1.png)
+![Query 9 output](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/09_2.png)
+![Query 9 output](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/09_3.png)
 
 ##### 10) Bar graph to show the Average salary per title (designation).
 ```
@@ -280,7 +280,7 @@ select t.title, avg(s.salary) as avg_salary  from employees_jes e
 join salaries_jes s on e.emp_no = s.emp_no 
 join titles_jes t on t.title_id = e.emp_title_id group by t.title;
 ```
-![Query 10 output]()
+![Query 10 output](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/10.png)
 
 ##### 11) List of all employees with the designation, joining three tables.
 ```
@@ -300,7 +300,7 @@ select e.emp_no, e.first_name, e.last_name, s.salary, t.title from employees_jes
 inner join (selet emp_no, max(salary) as salary from salaries_jes group by emp_no) s on s.emp_no = e.emp_no
 inner join titles_jes t on t.title_id = e.emp_title_id;
 ```
-![Query 14 output]()
+![Query 14 output](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/14.png)
 
 #### Step-5: EDA (Exploratory Data Analysis) in Pyspark SQL.
 please refer to ![Jupyter notebook for PySpark]()
