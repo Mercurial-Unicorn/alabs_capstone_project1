@@ -1,0 +1,50 @@
+#Analytix Labs Capstone Project - Level - 1
+#Jadeja Jesalba M
+#16/05/22
+#link - [Quick Diagrams](https://www.quickdatabasediagrams.com/)
+
+Titles
+- #the hyphen indicates the start of column schema. # hyphen is arbitary.
+title_id PK int #this is the primary key
+Title string
+
+Employees
+--
+emp_no PK int
+emp_titles_id string FK -< Titles.title_id
+#The emp_titles column is a foreign key from the Employees table. 
+#It is a one to many relationship, as there are many employees with the same title.
+birth_date date
+first_name string
+last_name string
+sex string
+hire_date date
+no_of_projects int
+Last_performance_rating string
+left bool
+Last_date date
+
+Salaries
+---
+emp_no bigint FK - Employees.emp_no #emp_no is foreign key from Employees table.
+#It is one to one relationship as one employee can have only one salary.
+Salary bigint
+
+Departments
+----
+dept_no PK string
+dept_name string
+
+Department_Managers
+-----
+dept_no string FK >- Departments.dept_no #dept_no is a foreign key from Departments table.
+#It is one to many relationship as one department has multiple depatment managers in the data.
+emp_no int FK - Employees.emp_no #emp_no is foreign key from Employees table.
+#It is one to one relationship as one manager can have only one employee ID.
+
+Department_Employees
+------
+emp_no int FK - Employees.emp_no #emp_no is foreign key from Employees table.
+#It is a one to one realtionship as one employee can have only one employee ID.
+dept_no string FK >- Departments.dept_no #dept_no is a foreign key from Departments table.
+#It is a one to many realtionship as some of the employees belong to more than one department in the data.
