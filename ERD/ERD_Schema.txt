@@ -1,7 +1,7 @@
 #Analytix Labs Capstone Project - Level - 1
 #Jadeja Jesalba M
 #16/05/22
-#link - [Quick Diagrams](https://www.quickdatabasediagrams.com/)
+#link - Quick Diagrams - https://www.quickdatabasediagrams.com/
 
 Titles
 - #the hyphen indicates the start of column schema. # hyphen is arbitary.
