@@ -306,7 +306,7 @@ inner join titles_jes t on t.title_id = e.emp_title_id;
 ![Query 14 output](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/14.png)
 
 #### Step-5: EDA (Exploratory Data Analysis) in Pyspark SQL.
-please refer to ![Jupyter notebook for PySpark](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/pyspark_SQL.ipynb)
+please refer to [Jupyter notebook for PySpark](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/pyspark_SQL.ipynb)
    - The query for spark table isn't visible. I have loaded it here.
      ```
      spark.sql("select * from employees_jes limit 20").show()
