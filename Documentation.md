@@ -5,7 +5,7 @@
 ### Project Profile:
 I have been given HR Employee data from Analytix Labs from 1980s and 1995s. There are a total of 6 ‘csv’ files containing the whole HR Employee data. 
 
-### Project Objective:
+### Business Objective:
 The objective of this project is to create a data engineering solution to the HR Employee data. And to create a data model that helps with extraction, transformation and loading of data from one tool to another for fundamental data analysis using the following technology stack. 
 
 ### Technology Stack:
@@ -19,12 +19,15 @@ The objective of this project is to create a data engineering solution to the HR
     - SparkML (to perform model building)
 
 ### Data Files:
-    - tiles.csv
-    - departments.sv
-    - employees.csv
-    - dept_emp.csv
-    - salaries.csv
-    - dept_manager.csv
+    - tiles.csv - File with all the job profiles in the organisation
+    - departments.sv - File with all the different departments in the organisation
+    - employees.csv - File with all employees data like birthdate, joining date, ID, etc
+    - dept_emp.csv - File with details about which employee belongs to which department
+    - salaries.csv - File with salaries of each employee
+    - dept_manager.csv - File with each department's managerial position details
+
+### ERD (Entity Relationship Diagram):
+![ERD](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/ERD/ERD_Capstone_Project_Level_1.png)
 
 ### Pipeline:
 #### Step-1: MySQL data loading.
@@ -304,3 +307,13 @@ inner join titles_jes t on t.title_id = e.emp_title_id;
 
 #### Step-5: EDA (Exploratory Data Analysis) in Pyspark SQL.
 please refer to ![Jupyter notebook for PySpark]()
+
+### Challenges Faced:
+    - Data type inconsistencies between different versions of tools in the technology stack.
+    - Scoop import data failing repeatedly due to lab/internet issues.
+    - Version control between all versions of tools that were used.
+    
+### Future Work:
+    - More sophisticated quesries 
+    - More number of analysis 
+    - Creation of a general purpose dashboard for HR Employee Data for other companies to use
