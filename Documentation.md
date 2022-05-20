@@ -306,12 +306,38 @@ inner join titles_jes t on t.title_id = e.emp_title_id;
 ![Query 14 output](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/14.png)
 
 #### Step-5: EDA (Exploratory Data Analysis) in Pyspark SQL.
-please refer to ![Jupyter notebook for PySpark]()
-
+please refer to ![Jupyter notebook for PySpark](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/pyspark_SQL.ipynb)
+   - The query for spark table isn't visible. I have loaded it here.
+     ```
+     spark.sql("select * from employees_jes limit 20").show()
+     ```
+   ![emp_table](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/select_employees.png) 
+   - some of the Plots are not visible in the Jupyter notebook. I have mentioned them here.
+    
+   11) Salary distribution by sex
+   ```
+    import plotly.express as px
+    
+    plt.figure(figsize = (15, 10))
+    plot1 = px.histogram(emp_full, x = 'salary', color= "sex", nbins = 10, title='Salary distribution by sex', 
+                    labels={'salary':'Employee Salary'})
+    plot1.show()
+   ```
+   ![Plot1](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/salary_by_sex.png)
+   
+   12) No of employees per designation segregated by salary
+   ```
+    plt.figure(figsize = (15, 10))
+    plot2 = px.bar(emp_sal_grouped2, x = 'title', y = 'emp_no', color = 'salary')
+    plot2.show()
+   ```
+   ![Plot2](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/blob/main/EDA_Outputs/salary_by_job.png)
+   
 ### Challenges Faced:
     - Data type inconsistencies between different versions of tools in the technology stack.
     - Scoop import data failing repeatedly due to lab/internet issues.
     - Version control between all versions of tools that were used.
+    - Plots won't load in the Jupyter notebook.
     
 ### Future Work:
     - More sophisticated quesries 
