@@ -18,7 +18,7 @@ The objective of this project is to create a data engineering solution to the HR
     - SparkSQL (to perform the EDA)
     - SparkML (to perform model building)
 
-### Data Files:
+### [Data Files](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/tree/main/data):
     - tiles.csv - File with all the job profiles in the organisation
     - departments.sv - File with all the different departments in the organisation
     - employees.csv - File with all employees data like birthdate, joining date, ID, etc
