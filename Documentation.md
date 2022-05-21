@@ -21,7 +21,7 @@ The objective of this project is to create a data engineering solution to the HR
 ### [Data Files](https://github.com/Mercurial-Unicorn/alabs_capstone_project1/tree/main/data):
     - tiles.csv - File with all the job profiles in the organisation
     - departments.sv - File with all the different departments in the organisation
-    - employees.csv - File with all employees data like birthdate, joining date, ID, etc
+    - employees.csv - File with all employee's data like birthdate, joining date, ID, etc
     - dept_emp.csv - File with details about which employee belongs to which department
     - salaries.csv - File with salaries of each employee
     - dept_manager.csv - File with each department's managerial position details
